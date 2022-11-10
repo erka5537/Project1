@@ -11,21 +11,21 @@ public class Exceptions03 {
         6)Custom "CompileTimeException" üretmek için "extends Exception" deriz.
      */
 
-    public static void main(String[] args) throws IllegalGradeException {
+    public static void main(String[] args) throws IllegalGradeException{
 
         try{
-            printGrades(60);
-        }catch(IllegalGradeException e){
+            printGrades(-60);
+        }catch (Exception e){
             System.out.println(e.getMessage());
         }
 
-        checkNameFormat("Ali");
+        checkNameFormat("ali");
     }
 
     //Öğrenci notlarını yazdıran bir method oluşturunuz
     public static void printGrades(double grade) throws IllegalGradeException {
 
-        if(grade<0 ||grade>100){
+        if(grade<0 || grade>100){
             throw new IllegalGradeException("Grade 0 dan az 100 den çok olamaz");
         }else{
             System.out.println(grade);
