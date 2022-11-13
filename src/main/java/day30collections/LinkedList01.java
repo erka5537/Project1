@@ -15,14 +15,14 @@ public class LinkedList01 {
         names.add("Tom");
         names.add("Jeremy");
         names.add("Hans");
-        System.out.println(names);
+        System.out.println(names);//[Chris, Alexandre, Mark, Tom, Jeremy, Hans]
 
         /*
             Retrieves, but does not remove, first element of this list.
             Returns: the head of this list, or null if this list is empty
          */
 
-        String firstEl = names.peek();//[Chris, Alexandre, Mark, Tom, Jeremy, Hans]
+        String firstEl = names.peek();
         System.out.println(firstEl);//Chris
 
         System.out.println(names);//[Chris, Alexandre, Mark, Tom, Jeremy, Hans]
