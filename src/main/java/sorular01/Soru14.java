@@ -1,4 +1,4 @@
-package sorular;
+package sorular01;
 
 public class Soru14 {
 

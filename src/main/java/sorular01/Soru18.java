@@ -1,6 +1,4 @@
-package sorular;
-
-import java.util.Arrays;
+package sorular01;
 
 public class Soru18 {
 

@@ -1,7 +1,6 @@
-package sorular;
+package sorular01;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Soru22 {

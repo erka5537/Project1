@@ -1,4 +1,4 @@
-package sorular;
+package sorular01;
 
 import java.util.Arrays;
 import java.util.Scanner;

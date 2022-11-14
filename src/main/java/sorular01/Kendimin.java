@@ -1,6 +1,4 @@
-package sorular;
-
-import java.util.Scanner;
+package sorular01;
 
 public class Kendimin {
 

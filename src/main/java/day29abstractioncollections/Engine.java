@@ -11,6 +11,7 @@ public interface Engine extends Vehicle{
     //interface'lerdeki tüm variable'lar otomatik olarak(default) "public" dir.
     //interface'lerdeki tüm variable'lar otomatik olarak(default) "final" dır.
     //interface'lerdeki tüm variable'lar otomatik olarak(default) "static" dir.
+
     public static final int price = 2000;
 
     double weight = 23.5;
