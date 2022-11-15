@@ -1,10 +1,11 @@
-package org.example;
+package project_questions;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Ex13 {
+public class Market {
 
     public static void main(String[] args) {
 
@@ -45,10 +46,10 @@ public class Ex13 {
             idx++;
         }
 
-        System.out.println("1 haftalık ortalama kazanç: " + getOrtalamaKazanc(gunlukKazanclar));
-        getOrtalamaninUstundeKazancGünleri(gunler,gunlukKazanclar);
+        System.out.println("\n1 haftalık ortalama kazanç: " + new DecimalFormat(".##").format(getOrtalamaKazanc(gunlukKazanclar))+"\n");
+        getOrtalamaninUstundeKazancGunleri(gunler,gunlukKazanclar);
         System.out.println();
-        getOrtalamaninAltindaKazancGünleri(gunler,gunlukKazanclar);
+        getOrtalamaninAltindaKazancGunleri(gunler,gunlukKazanclar);
 
     }
 
@@ -58,18 +59,15 @@ public class Ex13 {
         for (Double w : a) {
             toplam = toplam + a.get(a.indexOf(w));
         }
-        double ortalama = toplam / a.size();
-
-        return ortalama;
+        return toplam / a.size();
     }
 
     //Ortlamanın üstende kazanç sağlanan günleri bulan method
-    public static void getOrtalamaninUstundeKazancGünleri(List<String> a, List<Double> b){
+    public static void getOrtalamaninUstundeKazancGunleri(List<String> a, List<Double> b){
 
         double skala = getOrtalamaKazanc(b);
 
         System.out.print("Ortalamanın üstende kazanç sağladığınız günler: ");
-
         int idx = 0;
         for(Double w : b){
             if(w>skala){
@@ -77,10 +75,11 @@ public class Ex13 {
             }
             idx++;
         }
+        System.out.println();
     }
 
     ////Ortlamanın altında kazanç sağlanan günleri bulan method
-    public static void getOrtalamaninAltindaKazancGünleri(List<String> a, List<Double> b){
+    public static void getOrtalamaninAltindaKazancGunleri(List<String> a, List<Double> b){
 
         double skala = getOrtalamaKazanc(b);
 
@@ -92,6 +91,7 @@ public class Ex13 {
             }
             idx++;
         }
+        System.out.println();
     }
 }
 
