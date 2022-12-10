@@ -10,5 +10,6 @@ public class a {
         assert false;
         assert false;
         assert false;
+        assert false;
     }
 }
