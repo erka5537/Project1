@@ -4,6 +4,7 @@ public class a {
 
     public static void main(String[] args) {
 
-        System.out.println("hbmbqgexvezzxtaaaas888a777894568asasaaddadsasdaadasaasaadaaaa");
+        System.out.println("hbmbqgexvezzxtaaaas88b8a" +
+                "777894568asasaaddadsasdaadasaasaadaaaa");
     }
 }
