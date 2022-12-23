@@ -1,4 +1,4 @@
 # Project exclude paths
 /target/
-/src
-/target
+src/
+target/
