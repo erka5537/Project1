@@ -1,5 +1,2 @@
 # Project exclude paths
 /target/
-src/
-target/
-java/
