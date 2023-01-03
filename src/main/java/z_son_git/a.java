@@ -1,4 +1,4 @@
-package sorular02;
+package z_son_git;
 
 public class a {
 
