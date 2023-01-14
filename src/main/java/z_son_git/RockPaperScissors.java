@@ -105,7 +105,7 @@ public class RockPaperScissors {
         draw.setForeground(Color.red);
 
         win.add(rock);
-
+        win.add(paper);
         win.add(scissors);
         win.add(player1_img);
         win.add(player2_img);
