@@ -104,7 +104,7 @@ public class RockPaperScissors {
         draw.setHorizontalAlignment(JLabel.CENTER);
         draw.setForeground(Color.red);
 
-        win.add(rock);
+
         win.add(paper);
         win.add(scissors);
         win.add(player1_img);
