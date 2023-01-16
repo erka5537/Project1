@@ -27,7 +27,6 @@ public class RockPaperScissors {
     int player1_score=0;
     int player2_score=0;
 
-
     public RockPaperScissors() {
         //pencere oluşturma işlemleri
         this.win = new JFrame("Rock Paper Scissors");
