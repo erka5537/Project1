@@ -80,7 +80,6 @@ public class RockPaperScissors {
         player2_img.setBounds(500, 80, 160, 160);
 
         //players
-
         this.player1 = new JLabel("Player 1");
         player1.setBounds(150,40,160,50);
         player1.setFont(new Font("Arial",Font.BOLD,25));
