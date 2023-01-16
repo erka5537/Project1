@@ -108,7 +108,6 @@ public class RockPaperScissors {
         win.add(score);
         win.add(draw);
         win.setVisible(true);
-
     }
 
     public void rockpaper() {
