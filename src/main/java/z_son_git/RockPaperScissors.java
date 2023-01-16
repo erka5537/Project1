@@ -49,7 +49,6 @@ public class RockPaperScissors {
         });
 
 
-
         this.paper = new JButton(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\kağıt.png"));
         paper.setBounds(205, 250, 50, 50);
         paper.setBorderPainted(false);
