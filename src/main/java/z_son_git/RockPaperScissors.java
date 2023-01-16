@@ -73,7 +73,6 @@ public class RockPaperScissors {
         });
 
         //resim
-
         this.player1_img = new JLabel(new ImageIcon("C:\\\\Users\\\\ERKA55\\\\Desktop\\\\TaşKağıtMakas\\\\tas.png"));
         player1_img.setBounds(150, 80, 160, 160);
 
