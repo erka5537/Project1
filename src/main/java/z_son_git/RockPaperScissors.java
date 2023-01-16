@@ -117,7 +117,7 @@ public class RockPaperScissors {
         player2_img.setIcon(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\"+x2));
 
         SwingUtilities.updateComponentTreeUI(win);
-        if(player1_score == 10) {
+        if(player1_score == 10){
             JOptionPane.showMessageDialog(null,"Player1 win!", "Rock Paper Scissors", JOptionPane.DEFAULT_OPTION);
             player1_img.setIcon(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\tas.png"));
             player2_img.setIcon(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\tas.png"));
