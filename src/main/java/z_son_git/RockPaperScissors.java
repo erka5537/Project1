@@ -36,7 +36,6 @@ public class RockPaperScissors {
         win.setResizable(false);
 
         //rock buton
-
         this.rock = new JButton(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\tas.png"));
         rock.setBounds(150, 250, 50, 50);
         rock.setBorderPainted(false);
