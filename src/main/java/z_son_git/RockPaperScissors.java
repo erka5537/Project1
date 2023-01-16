@@ -110,7 +110,7 @@ public class RockPaperScissors {
         win.setVisible(true);
     }
 
-    public void rockpaper() {
+    public void rockpaper(){
         String[] list_2 = {"tas.png","kağıt.png","makas.png"};
         Random r = new Random();
         String x2 = list_2[r.nextInt(list_2.length)];
