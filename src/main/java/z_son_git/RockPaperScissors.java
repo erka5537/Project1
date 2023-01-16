@@ -125,7 +125,7 @@ public class RockPaperScissors {
             player2_score = 0;
             score.setText(player1_score+" - "+player2_score);
 
-        }else if(player2_score ==10) {
+        }else if(player2_score == 10) {
             JOptionPane.showMessageDialog(null,"Player2 win!", "Rock Paper Scissors!", JOptionPane.DEFAULT_OPTION);
             player1_img.setIcon(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\tas.png"));
             player2_img.setIcon(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\tas.png"));
