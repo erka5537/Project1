@@ -140,7 +140,7 @@ public class RockPaperScissors {
                 score.setText(player1_score+" - "+player2_score);
                 draw.setText("");
 
-            } else if(p1 == "rock" && x2 == "makas.png") {
+            }else if(p1 == "rock" && x2 == "makas.png") {
                 player1_score++;
                 score.setText(player1_score+" - "+player2_score);
                 draw.setText("");
