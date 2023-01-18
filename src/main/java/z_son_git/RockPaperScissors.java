@@ -160,7 +160,7 @@ public class RockPaperScissors {
                 draw.setText("");
             }
 
-            else if(p1 == "paper" && x2 == "kağıt.png") {
+            else if(p1 == "paper" && x2 == "kağıt.png"){
                 draw.setText("Draw");
             }
 
