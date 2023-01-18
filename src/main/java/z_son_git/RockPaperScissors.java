@@ -90,7 +90,7 @@ public class RockPaperScissors {
 
         this.score = new JLabel(player1_score+" - "+player2_score);
         score.setBounds(300, 110, 200, 100);
-        score.setFont(new Font("Arial",Font.BOLD,50));
+        score.setFont(new Font("Arial", Font.BOLD,50));
         score.setHorizontalAlignment(JLabel.CENTER);
 
         this.draw = new JLabel("");
