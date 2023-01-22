@@ -173,6 +173,6 @@ public class RockPaperScissors {
     }
 
     public static void main(String[]args) {
-        new RockPaperScissors(); //Run - Good Luck -erk
+        new RockPaperScissors(); //Run - Good Luck
     }
 }
