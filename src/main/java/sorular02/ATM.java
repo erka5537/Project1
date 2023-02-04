@@ -1,5 +1,6 @@
 package sorular02;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class ATM {
@@ -9,6 +10,9 @@ public class ATM {
     static String sifre = "";
     static String kartNo = "";
     static double bakiye = 8500.47;
+    static DecimalFormat decimalFormat = new DecimalFormat(".##");
+
+
 
     public static void main(String[] args) {
 
@@ -68,7 +72,7 @@ public class ATM {
                 sifreDegistir();break;
             } else if (islem == 6) {
                 cıkıs();break;
-            } else System.err.println("Hatalı giriş yaptınız");
+            } else System.err.println("Hatalı giriş yaptınız");anaMenu();break;
         }
     }
     public static void paraCek(){
@@ -76,7 +80,7 @@ public class ATM {
         System.out.println("Çekmek istediğiniz tutarı giriniz");
         double tutar = input.nextDouble();
         bakiye -= tutar;
-        System.out.println("Kalan bakiye: "+bakiye);
+        System.out.println("Kalan bakiye: "+decimalFormat.format(bakiye));
         while(true){
             System.out.println("Ana menü için ==> 1\nÇıkış için ==> 2");
             int karar = input.nextInt();
@@ -92,7 +96,7 @@ public class ATM {
         System.out.println("Yatırmak istediğiniz tutarı giriniz");
         double tutar = input.nextDouble();
         bakiye += tutar;
-        System.out.println("Kalan bakiye: "+bakiye);
+        System.out.println("Kalan bakiye: "+decimalFormat.format(bakiye));
         while(true){
             System.out.println("Ana menü için ==> 1\nÇıkış için ==> 2");
             int karar = input.nextInt();
@@ -113,7 +117,7 @@ public class ATM {
             System.out.println("Göndermek istediğiniz tutarı giriniz");
             double tutar = input.nextDouble();
             bakiye -= tutar;
-            System.out.println("Kalan bakiye: "+bakiye);
+            System.out.println("Kalan bakiye: "+decimalFormat.format(bakiye));
         }
         while(true){
             System.out.println("Ana menü için ==> 1\nÇıkış için ==> 2");
@@ -156,7 +160,7 @@ public class ATM {
         System.out.println("İyi günler...");
     }
     public static void bakiyeSorgula(){
-        System.out.println(bakiye);
+        System.out.println(decimalFormat.format(bakiye));
         Scanner input = new Scanner(System.in);
         while(true){
             System.out.println("Ana menü için ==> 1\nÇıkış için ==> 2");
