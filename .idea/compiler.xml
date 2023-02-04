@@ -6,8 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
         <module name="RockPaperScissors" />
         <module name="Batch103" />
+=======
+        <module name="Batch103" />
+        <module name="Project1" />
+>>>>>>> 72350b9 (completed)
       </profile>
     </annotationProcessing>
   </component>
