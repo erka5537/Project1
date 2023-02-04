@@ -173,10 +173,6 @@ public class RockPaperScissors {
     }
 
     public static void main(String[]args) {
-<<<<<<< HEAD
-        new RockPaperScissors();//l
-=======
         new RockPaperScissors();//
->>>>>>> 72350b9 (completed)
     }
 }
