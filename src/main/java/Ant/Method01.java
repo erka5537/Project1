@@ -8,7 +8,7 @@ public class Method01 {
     public static void main(String[] args) {
         // Verilen bir cumlede istenen harfin kac defa kullanildigini yazdiran
         // bir method olusturun
-//
+
         System.out.println(kacDefa(harfleriBul()));
 
     }
