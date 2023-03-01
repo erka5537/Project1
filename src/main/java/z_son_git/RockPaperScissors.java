@@ -30,7 +30,7 @@ public class RockPaperScissors {
         win.setResizable(false);
 
         //rock button
-        ImageIcon rockIcon = new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\tas.png");
+        ImageIcon rockIcon = new ImageIcon("src/main/java/z_son_git/tas.png");
         Image newRock = rockIcon.getImage().getScaledInstance( 50, 50,  java.awt.Image.SCALE_SMOOTH ) ;
         rockIcon = new ImageIcon( newRock );
         this.rock = new JButton(rockIcon);
@@ -40,12 +40,12 @@ public class RockPaperScissors {
         rock.setContentAreaFilled(false);
 
         rock.addActionListener((ActionEvent e)->{
-            player1_img.setIcon(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\tas.png"));
+            player1_img.setIcon(new ImageIcon("src/main/java/z_son_git/tas.png"));
             p1 = "rock";
             rockpaper();
         });
 
-        ImageIcon paperIcon = new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\kağıt.png");
+        ImageIcon paperIcon = new ImageIcon("src/main/java/z_son_git/kağıt.png");
         Image newPaper = paperIcon.getImage().getScaledInstance( 50, 50,  java.awt.Image.SCALE_SMOOTH ) ;
         paperIcon = new ImageIcon( newPaper );
         this.paper = new JButton(paperIcon);
@@ -55,12 +55,12 @@ public class RockPaperScissors {
         paper.setContentAreaFilled(false);
 
         paper.addActionListener((ActionEvent e)->{
-            player1_img.setIcon(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\kağıt.png"));
+            player1_img.setIcon(new ImageIcon("src/main/java/z_son_git/kağıt.png"));
             p1 = "paper";
             rockpaper();
         });
 
-        ImageIcon scissorsIcon = new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\makas.png");
+        ImageIcon scissorsIcon = new ImageIcon("src/main/java/z_son_git/makas.png");
         Image newScissors = scissorsIcon.getImage().getScaledInstance( 50, 50,  java.awt.Image.SCALE_SMOOTH ) ;
         scissorsIcon = new ImageIcon( newScissors );
         this.scissors = new JButton(scissorsIcon);
@@ -70,16 +70,16 @@ public class RockPaperScissors {
         scissors.setContentAreaFilled(false);
 
         scissors.addActionListener((ActionEvent e)->{
-            player1_img.setIcon(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\makas.png"));
+            player1_img.setIcon(new ImageIcon("src/main/java/z_son_git/makas.png"));
             p1 = "scissors";
             rockpaper();
         });
 
         //resim
-        this.player1_img = new JLabel(new ImageIcon("C:\\\\Users\\\\ERKA55\\\\Desktop\\\\TaşKağıtMakas\\\\tas.png"));
+        this.player1_img = new JLabel(new ImageIcon("src/main/java/z_son_git/tas.png"));
         player1_img.setBounds(120, 80, 200, 150);
 
-        this.player2_img = new JLabel(new ImageIcon("C:\\\\Users\\\\ERKA55\\\\Desktop\\\\TaşKağıtMakas\\\\tas.png"));
+        this.player2_img = new JLabel(new ImageIcon("src/main/java/z_son_git/tas.png"));
         player2_img.setBounds(500, 80, 200, 150);
 
         //players
@@ -117,59 +117,59 @@ public class RockPaperScissors {
         String[] list_2 = {"tas.png","kağıt.png","makas.png"};
         Random r = new Random();
         String x2 = list_2[r.nextInt(list_2.length)];
-        player2_img.setIcon(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\"+x2));
+        player2_img.setIcon(new ImageIcon("src/main/java/z_son_git/"+x2));
 
         SwingUtilities.updateComponentTreeUI(win);
         if(player1_score == 10){
-            JOptionPane.showMessageDialog(null,"Player1 win!", "Rock Paper Scissors", JOptionPane.DEFAULT_OPTION);
-            player1_img.setIcon(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\tas.png"));
-            player2_img.setIcon(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\tas.png"));
+            JOptionPane.showMessageDialog(null,"Player1 win!", "Rock Paper Scissors", JOptionPane.PLAIN_MESSAGE);
+            player1_img.setIcon(new ImageIcon("src/main/java/z_son_git/tas.png"));
+            player2_img.setIcon(new ImageIcon("src/main/java/z_son_git/tas.png"));
             player1_score = 0;
             player2_score = 0;
             score.setText(player1_score+" - "+player2_score);
 
         }else if(player2_score == 10){
-            JOptionPane.showMessageDialog(null,"Player2 win!", "Rock Paper Scissors!", JOptionPane.DEFAULT_OPTION);
-            player1_img.setIcon(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\tas.png"));
-            player2_img.setIcon(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\tas.png"));
+            JOptionPane.showMessageDialog(null,"Player2 win!", "Rock Paper Scissors!", JOptionPane.PLAIN_MESSAGE);
+            player1_img.setIcon(new ImageIcon("src/main/java/z_son_git/tas.png"));
+            player2_img.setIcon(new ImageIcon("src/main/java/z_son_git/tas.png"));
             player1_score = 0;
             player2_score = 0;
             score.setText(player1_score+" - "+player2_score);
         }else {
-            if(p1 == "rock" && x2 == "kağıt.png"){
+            if(p1.equals("rock")  && x2.equals("kağıt.png")){
                 player2_score++;
                 score.setText(player1_score+" - "+player2_score);
                 draw.setText("");
 
-            }else if(p1 == "rock" && x2 == "makas.png"){
+            }else if(p1.equals("rock") && x2.equals("makas.png")){
                 player1_score++;
                 score.setText(player1_score+" - "+player2_score);
                 draw.setText("");
-            }else if(p1 == "rock" && x2 == "tas.png"){
+            }else if(p1.equals("rock") && x2.equals("tas.png")){
                 draw.setText("Draw");
             }
 
-            if(p1 == "paper" && x2 == "tas.png"){
+            if(p1.equals("paper")  && x2.equals("tas.png")){
                 player1_score++;
                 score.setText(player1_score+" - "+player2_score);
                 draw.setText("");
-            }else if(p1 == "paper" && x2 == "makas.png"){
+            }else if(p1.equals("paper") && x2.equals("makas.png")){
                 player2_score++;
                 score.setText(player1_score+" - "+player2_score);
                 draw.setText("");
-            }else if(p1 == "paper" && x2 == "kağıt.png"){
+            }else if(p1.equals("paper") && x2.equals("kağıt.png")){
                 draw.setText("Draw");
             }
 
-            if(p1 == "scissors" && x2 == "tas.png"){
+            if(p1.equals("scissors")  && x2.equals("tas.png")){
                 player2_score++;
                 score.setText(player1_score+" - "+player2_score);
                 draw.setText("");
-            }else if(p1 == "scissors" && x2 == "kağıt.png"){
+            }else if(p1.equals("scissors") && x2.equals("kağıt.png")){
                 player1_score++;
                 score.setText(player1_score+" - "+player2_score);
                 draw.setText("");
-            }else if(p1 == "scissors" && x2 == "makas.png"){
+            }else if(p1.equals("scissors") && x2.equals("makas.png")){
                 draw.setText("Draw");
             }
         }
