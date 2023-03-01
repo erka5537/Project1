@@ -1,15 +1,9 @@
 package z_son_git;
 
-import java.awt.Color;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.Random;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
 public class RockPaperScissors {
 
@@ -36,7 +30,10 @@ public class RockPaperScissors {
         win.setResizable(false);
 
         //rock button
-        this.rock = new JButton(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\tas.png"));
+        ImageIcon rockIcon = new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\tas.png");
+        Image newRock = rockIcon.getImage().getScaledInstance( 50, 50,  java.awt.Image.SCALE_SMOOTH ) ;
+        rockIcon = new ImageIcon( newRock );
+        this.rock = new JButton(rockIcon);
         rock.setBounds(150, 250, 50, 50);
         rock.setBorderPainted(false);
         rock.setOpaque(false);
@@ -48,7 +45,10 @@ public class RockPaperScissors {
             rockpaper();
         });
 
-        this.paper = new JButton(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\kağıt.png"));
+        ImageIcon paperIcon = new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\kağıt.png");
+        Image newPaper = paperIcon.getImage().getScaledInstance( 50, 50,  java.awt.Image.SCALE_SMOOTH ) ;
+        paperIcon = new ImageIcon( newPaper );
+        this.paper = new JButton(paperIcon);
         paper.setBounds(205, 250, 50, 50);
         paper.setBorderPainted(false);
         paper.setOpaque(false);
@@ -60,7 +60,10 @@ public class RockPaperScissors {
             rockpaper();
         });
 
-        this.scissors = new JButton(new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\makas.png"));
+        ImageIcon scissorsIcon = new ImageIcon("C:\\Users\\ERKA55\\Desktop\\TaşKağıtMakas\\makas.png");
+        Image newScissors = scissorsIcon.getImage().getScaledInstance( 50, 50,  java.awt.Image.SCALE_SMOOTH ) ;
+        scissorsIcon = new ImageIcon( newScissors );
+        this.scissors = new JButton(scissorsIcon);
         scissors.setBounds(260, 250, 50, 50);
         scissors.setBorderPainted(false);
         scissors.setOpaque(false);
@@ -74,10 +77,10 @@ public class RockPaperScissors {
 
         //resim
         this.player1_img = new JLabel(new ImageIcon("C:\\\\Users\\\\ERKA55\\\\Desktop\\\\TaşKağıtMakas\\\\tas.png"));
-        player1_img.setBounds(150, 80, 160, 160);
+        player1_img.setBounds(120, 80, 200, 150);
 
         this.player2_img = new JLabel(new ImageIcon("C:\\\\Users\\\\ERKA55\\\\Desktop\\\\TaşKağıtMakas\\\\tas.png"));
-        player2_img.setBounds(500, 80, 160, 160);
+        player2_img.setBounds(500, 80, 200, 150);
 
         //players
         this.player1 = new JLabel("Player 1");
@@ -170,6 +173,12 @@ public class RockPaperScissors {
                 draw.setText("Draw");
             }
         }
+
+    }
+    private static Icon resizeIcon(ImageIcon icon, int resizedWidth, int resizedHeight) {
+        Image img = icon.getImage();
+        Image resizedImage = img.getScaledInstance(resizedWidth, resizedHeight,  java.awt.Image.SCALE_SMOOTH);
+        return new ImageIcon(resizedImage);
     }
 
     public static void main(String[]args) {
